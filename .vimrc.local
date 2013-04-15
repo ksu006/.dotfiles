@@ -1,0 +1,5 @@
+" Remap escape keys
+inoremap jj <Esc>
+vnoremap v <Esc>
+
+color jellybeans
