@@ -48,11 +48,6 @@ export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
 
-# Load aliases
-if [[ -r ~/.aliasrc ]]; then
-    source ~/.aliasrc
-fi
-
 # Load virtualenvwrapper
 if [[ -r /usr/local/share/python/virtualenvwrapper.sh ]]; then
     source /usr/local/share/python/virtualenvwrapper.sh
