@@ -41,9 +41,8 @@ eval "$(rbenv init -)"
 # Use vim as default editor
 export EDITOR="vim"
 
-# Set Java and Python paths
+# Set java classpath
 export JAVA_HOME=`/usr/libexec/java_home`
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
