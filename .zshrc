@@ -60,6 +60,3 @@ function chpwd() {
 
 # cd to directory by just typing name
 setopt AUTO_CD
-
-# Disable auto naming of tabs
-export DISABLE_AUTO_TITLE=true
