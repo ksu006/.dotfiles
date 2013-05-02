@@ -33,7 +33,7 @@ plugins=(brew bundler encode64 gem git osx pip)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/texbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # Initialize rbenv
 if [[ -r ~/.rbenv/bin/rbenv ]]; then
