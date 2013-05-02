@@ -3,8 +3,6 @@
 	email = ksu@brightroll.com
 [core]
 	editor = vim
-[push]
-	default = simple
 [color]
 	ui = true
 [pull]
