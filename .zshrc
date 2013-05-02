@@ -33,14 +33,7 @@ plugins=(brew bundler encode64 gem git osx pip)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-
-# Initialize rbenv
-if [[ -r ~/.rbenv/bin/rbenv ]]; then
-    eval "$(~/.rbenv/bin/rbenv init -)"
-elif [[ -r /usr/local/bin/rbenv ]]; then
-    eval "$(rbenv init -)"
-fi
+export PATH=~/.local/bin:/usr/local/share/python:~/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # Use vim as default editor
 export EDITOR="vim"
@@ -53,10 +46,11 @@ fi
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
 
-# Load virtualenvwrapper
-if [[ -r /usr/local/share/python/virtualenvwrapper.sh ]]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
-fi
+# Initialize rbenv (ruby)
+eval "$(rbenv init -)"
+
+# Initialize virtualenvwrapper (python)
+source virtualenvwrapper.sh
 
 # Call 'ls -a' immediately after any 'cd'
 function chpwd() {
