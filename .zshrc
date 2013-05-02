@@ -42,7 +42,9 @@ eval "$(rbenv init -)"
 export EDITOR="vim"
 
 # Set java classpath
-export JAVA_HOME=`/usr/libexec/java_home`
+if [[ $OSTYPE == 'darwin12.0' ]]; then
+    export JAVA_HOME=`/usr/libexec/java_home`
+fi
 
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
