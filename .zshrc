@@ -36,7 +36,11 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/texbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 # Initialize rbenv
-eval "$(rbenv init -)"
+if [[ -r ~/.rbenv/bin/rbenv ]]; then
+    eval "$(~/.rbenv/bin/rbenv init -)"
+elif [[ -r /usr/local/bin/rbenv ]]; then
+    eval "$(rbenv init -)"
+fi
 
 # Use vim as default editor
 export EDITOR="vim"
