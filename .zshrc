@@ -39,8 +39,10 @@ export PATH=~/.local/bin:/usr/local/share/python:~/.rbenv/bin:/usr/local/sbin:/u
 export EDITOR="vim"
 
 # Set java classpath
-if [[ $OSTYPE == 'darwin12.0' ]]; then
+if [[ $OSTYPE == darwin* ]]; then
     export JAVA_HOME=`/usr/libexec/java_home`
+elif [[ $OSTYPE == linux* ]]; then
+    export JAVA_HOME=$(readlink -f $(which java) | sed "s:jre/bin/java::")
 fi
 
 # Alias to repo
