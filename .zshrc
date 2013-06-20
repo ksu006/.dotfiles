@@ -45,14 +45,8 @@ elif [[ $OSTYPE == linux* ]]; then
     export JAVA_HOME=$(readlink -f $(which java) | sed "s:jre/bin/java::")
 fi
 
-# Alias to repo
-export GIT="ssh://git@git.btrll.com/home/git/repo"
-
 # Initialize rbenv (ruby)
 eval "$(rbenv init -)"
-
-# Initialize virtualenvwrapper (python)
-source virtualenvwrapper.sh
 
 # Call 'ls -a' immediately after any 'cd'
 function chpwd() {
@@ -62,3 +56,8 @@ function chpwd() {
 
 # cd to directory by just typing name
 setopt AUTO_CD
+
+# Alias to repo
+export GIT="ssh://git@git.btrll.com/home/git/repo"
+
+source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
