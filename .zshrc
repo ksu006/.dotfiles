@@ -38,6 +38,9 @@ export PATH=~/.local/bin:/usr/local/share/python:~/.rbenv/bin:/usr/local/sbin:/u
 # Use vim as default editor
 export EDITOR="vim"
 
+# Use 256 colors
+export TERM="xterm-256color"
+
 # Set java classpath
 if [[ $OSTYPE == darwin* ]]; then
     export JAVA_HOME=`/usr/libexec/java_home`
@@ -60,4 +63,8 @@ setopt AUTO_CD
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
 
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ $OSTYPE == darwin* ]]; then
+    source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+elif [[ $OSTYPE == linux* ]]; then
+    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
