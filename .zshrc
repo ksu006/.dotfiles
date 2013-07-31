@@ -62,9 +62,3 @@ setopt AUTO_CD
 
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
-
-if [[ $OSTYPE == darwin* ]]; then
-    source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-elif [[ $OSTYPE == linux* ]]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
