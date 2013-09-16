@@ -3,3 +3,7 @@ inoremap jj <Esc>
 vnoremap v <Esc>
 
 color jellybeans
+
+set shell=$SHELL
+
+let g:airline_powerline_fonts=1
