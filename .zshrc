@@ -31,9 +31,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew encode64 git osx python rbenv ruby sbt scala ssh-agent tmux)
 
-source $ZSH/oh-my-zsh.sh
-
-export PATH=/usr/local/texlive/2013/bin/x86_64-darwin:~/.local/bin:/usr/local/share/python:~/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/usr/local/texlive/2013/bin/x86_64-darwin:~/.local/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # Use vim as default editor
 export EDITOR="vim"
@@ -48,9 +46,6 @@ elif [[ $OSTYPE == linux* ]]; then
     export JAVA_HOME=$(readlink -f $(which java) | sed "s:jre/bin/java::")
 fi
 
-# Initialize rbenv (ruby)
-eval "$(rbenv init -)"
-
 # Call 'ls -a' immediately after any 'cd'
 function chpwd() {
     emulate -L zsh
@@ -62,3 +57,5 @@ setopt AUTO_CD
 
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
+
+source $ZSH/oh-my-zsh.sh
