@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+DEFAULT_USER="ksu"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -31,7 +32,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew encode64 git osx python rbenv ruby sbt scala ssh-agent tmux)
 
-export PATH=/usr/local/texlive/2013/bin/x86_64-darwin:~/.local/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/texlive/2013/bin/x86_64-darwin:~/.local/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # Use vim as default editor
 export EDITOR="vim"
