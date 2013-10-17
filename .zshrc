@@ -18,19 +18,32 @@ DEFAULT_USER="ksu"
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
+
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew encode64 git osx python rbenv ruby sbt scala ssh-agent tmux)
+
+source $ZSH/oh-my-zsh.sh
 
 export PATH=/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/texlive/2013/bin/x86_64-darwin:~/.local/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
@@ -58,5 +71,3 @@ setopt AUTO_CD
 
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
-
-source $ZSH/oh-my-zsh.sh
