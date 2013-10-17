@@ -2,7 +2,7 @@
 inoremap jj <Esc>
 vnoremap v <Esc>
 
-color jellybeans
+colorscheme jellybeans
 
 set shell=$SHELL
 
