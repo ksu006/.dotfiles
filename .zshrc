@@ -43,9 +43,9 @@ DEFAULT_USER="ksu"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew encode64 git osx python rbenv ruby sbt scala ssh-agent tmux)
 
-source $ZSH/oh-my-zsh.sh
-
 export PATH=/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/texlive/2013/bin/x86_64-darwin:~/.local/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+source $ZSH/oh-my-zsh.sh
 
 # Use vim as default editor
 export EDITOR="vim"
