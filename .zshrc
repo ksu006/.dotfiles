@@ -43,7 +43,7 @@ DEFAULT_USER="ksu"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew encode64 git osx python rbenv ruby sbt scala ssh-agent tmux)
 
-export PATH=/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/texlive/2013/bin/x86_64-darwin:~/.local/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/texlive/2013/bin/x86_64-darwin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,3 +71,11 @@ setopt AUTO_CD
 
 # Alias to repo
 export GIT="ssh://git@git.btrll.com/home/git/repo"
+
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
+
+alias ws="cd ~/workspace/"
+alias dp="cd ~/workspace/data_platform/"
+alias dl="cd ~/Downloads/"
