@@ -43,7 +43,8 @@ DEFAULT_USER="ksu"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew encode64 git osx python rbenv ruby sbt scala ssh-agent tmux)
 
-export PATH=/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/texlive/2013/bin/x86_64-darwin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/usr/local/Cellar/protobuf241/2.4.1/bin:/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/texlive/2013/bin/x86_64-darwin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 source $ZSH/oh-my-zsh.sh
 
