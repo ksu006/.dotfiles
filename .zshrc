@@ -56,7 +56,7 @@ export TERM="xterm-256color"
 
 # Set java classpath
 if [[ $OSTYPE == darwin* ]]; then
-    export JAVA_HOME=`/usr/libexec/java_home`
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 elif [[ $OSTYPE == linux* ]]; then
     export JAVA_HOME=$(readlink -f $(which java) | sed "s:jre/bin/java::")
 fi
