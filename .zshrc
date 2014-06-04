@@ -80,3 +80,7 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 alias ws="cd ~/workspace/"
 alias dp="cd ~/workspace/data_platform/"
 alias dl="cd ~/Downloads/"
+
+# Word jumping NOTE: could be keyboard dependent
+bindkey 'OC' forward-word
+bindkey 'OD' backward-word
