@@ -82,5 +82,5 @@ alias dp="cd ~/workspace/data_platform/"
 alias dl="cd ~/Downloads/"
 
 # Word jumping NOTE: could be keyboard dependent
-bindkey 'C' forward-word
-bindkey 'D' backward-word
+bindkey '0C' forward-word
+bindkey '0D' backward-word
