@@ -40,10 +40,10 @@ ZSH_THEME="ys"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew encode64 git osx python rbenv ruby sbt scala ssh-agent tmux)
+plugins=(aws brew bundler encode64 git jsontools osx pip python rbenv ruby sbt scala ssh-agent tmux urltools vagrant)
 
-export PATH=/usr/local/Cellar/protobuf241/2.4.1/bin:/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-eval `/usr/libexec/path_helper -s` # add mactex to PATH
+eval `/usr/libexec/path_helper -s`
+export PATH=/usr/local/Cellar/protobuf241/2.4.1/bin:/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/sbin:$PATH
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 source $ZSH/oh-my-zsh.sh
