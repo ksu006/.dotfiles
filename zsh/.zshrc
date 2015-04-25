@@ -1,7 +1,3 @@
-eval `/usr/libexec/path_helper -s`
-export PATH=/usr/local/Cellar/protobuf241/2.4.1/bin:/opt/hbase/bin:/opt/hadoop/bin:/opt/hadoop/sbin:/usr/local/sbin:$PATH
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
 source $HOME/dotfiles/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -28,6 +24,10 @@ bindkey "$terminfo[kcud1]" history-substring-search-down # Bind DOWN arrow key
 antigen theme ys
 
 antigen apply
+
+typeset -U path
+path=(/usr/local/Cellar/protobuf241/2.4.1/bin /usr/local/sbin "$path[@]")
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Use vim as default editor
 export EDITOR="vim"
@@ -58,14 +58,7 @@ unalias run-help
 autoload run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
 alias ws="cd ~/workspace/"
 alias dp="cd ~/workspace/data_platform/"
 alias dl="cd ~/Downloads/"
