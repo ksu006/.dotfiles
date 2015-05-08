@@ -5,5 +5,3 @@ vnoremap v <Esc>
 colorscheme jellybeans
 
 set shell=$SHELL
-
-let g:airline_powerline_fonts=1
