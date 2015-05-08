@@ -2,6 +2,8 @@
 inoremap jj <Esc>
 vnoremap v <Esc>
 
-colorscheme jellybeans
+" Use base16 color scheme
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-default
 
 set shell=$SHELL

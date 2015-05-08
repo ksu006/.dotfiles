@@ -1,1 +1,2 @@
+Bundle "chriskempson/base16-vim"
 Bundle "motus/pig.vim"
