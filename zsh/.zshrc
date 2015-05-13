@@ -10,6 +10,7 @@ antigen bundles <<EOBUNDLES
     git
     rbenv
     sbt
+    ssh-agent
 EOBUNDLES
 
 # Syntax highlighting
