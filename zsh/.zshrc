@@ -11,6 +11,7 @@ antigen use oh-my-zsh
 #    ssh-agent
 antigen bundles <<EOBUNDLES
     git
+    chriskempson/base16-shell --loc=base16-default.dark.sh
 EOBUNDLES
 
 # Syntax highlighting
@@ -55,11 +56,6 @@ function chpwd() {
 # cd to directory by just typing name
 setopt AUTO_CD
 
-#unalias run-help
-#autoload run-help
-#HELPDIR=/usr/local/share/zsh/help
-
 # Aliases
 alias ws="cd ~/workspace/"
-#alias dp="cd ~/workspace/data_platform/"
 alias dl="cd ~/Downloads/"
