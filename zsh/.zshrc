@@ -33,7 +33,7 @@ setopt AUTO_CD
 
 # Aliases
 alias dl="cd $HOME/Downloads/"
-alias dot="cd $HOME/dotfiles/"
+alias dot="cd $HOME/.dotfiles/"
 alias g=git
 alias ws=$HOME/workspace
 
