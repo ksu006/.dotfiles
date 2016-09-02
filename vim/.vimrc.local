@@ -1,9 +1,46 @@
-" Remap escape keys
-inoremap jj <Esc>
-vnoremap v <Esc>
+" Use my shell choice rather than default /bin/sh
+set shell=$SHELL
+
+" Use sgr mouse if available
+if has('mouse_sgr')
+  set ttymouse=sgr
+endif
 
 " Use base16 color scheme
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-default
+colorscheme base16-default-dark
 
-set shell=$SHELL
+" YCM
+" ============================================================================
+" jump to declaration
+nnoremap <Leader>jd :YcmCompleter GoTo<CR>
+map <2-LeftMouse> <Leader>jd
+" refresh
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+
+" Airline
+" ============================================================================
+" Set color theme
+let g:airline_theme='base16'
+let g:bufferline_echo=0
+
+" CtrlP
+" ============================================================================
+" Only search filename rather than full path by default
+let g:ctrlp_by_filename = 1
+" Mapping for using CtrlP to switch buffers
+nnoremap <Leader>p :CtrlPBuffer<CR>
+
+" Syntastic
+let g:syntastic_zsh_checkers = ['zsh']
+
+" Toggle colorcolumn to 1 greater than textwith
+nnoremap <Leader><bar> :call ColorColumnToggle()<CR>
+function! ColorColumnToggle()
+  let &colorcolumn = &colorcolumn != '' ? '' : '+1'
+  set colorcolumn?
+endfunction
+
+if filereadable(expand("~/.vimrc.local.local"))
+    source ~/.vimrc.local.local
+endif
