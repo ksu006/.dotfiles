@@ -12,7 +12,10 @@ export EDITOR="vim"
 export HIST_STAMPS="yyyy-mm-dd"
 
 # Source antigen
-source ${${(%):-%N}:A:h:h}/antigen/antigen.zsh
+if [[ ! -d $HOME/.antigen/repos/antigen ]]; then
+    git clone https://github.com/zsh-users/antigen.git $HOME/.antigen/repos/antigen
+fi
+source $HOME/.antigen/repos/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
