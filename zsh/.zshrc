@@ -3,11 +3,6 @@ typeset -U fpath
 
 path=($HOME/.local/bin $path)
 
-# Homebrew
-if [[ $OSTYPE == darwin* && -d $HOME/homebrew/bin ]]; then
-    path=($HOME/homebrew/bin $path)
-fi
-
 export EDITOR="vim"
 export HIST_STAMPS="yyyy-mm-dd"
 
@@ -18,6 +13,12 @@ fi
 source $HOME/.antigen/repos/antigen/antigen.zsh
 
 antigen use oh-my-zsh
+
+# Homebrew
+if [[ $OSTYPE == darwin* && -d $HOME/homebrew/bin ]]; then
+    path=($HOME/homebrew/bin $path)
+    antigen bundle brew
+fi
 
 antigen bundles <<EOBUNDLES
     chriskempson/base16-shell --loc=scripts/base16-default-dark.sh
