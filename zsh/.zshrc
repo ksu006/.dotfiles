@@ -12,7 +12,7 @@ export EDITOR="vim"
 export HIST_STAMPS="yyyy-mm-dd"
 
 # Source antigen
-source $HOME/dotfiles/antigen/antigen.zsh
+source ${${(%):-%N}:A:h:h}/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
