@@ -22,6 +22,8 @@ fi
 
 antigen bundles <<EOBUNDLES
     chriskempson/base16-shell --loc=scripts/base16-default-dark.sh
+    zsh-users/zsh-autosuggestions
+    zsh-users/zsh-completions
     zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
