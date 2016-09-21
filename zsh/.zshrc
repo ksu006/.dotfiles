@@ -21,7 +21,7 @@ if [[ $OSTYPE == darwin* && -d $HOME/homebrew/bin ]]; then
 fi
 
 antigen bundles <<EOBUNDLES
-    chriskempson/base16-shell --loc=scripts/base16-default-dark.sh
+    chriskempson/base16-shell --loc=scripts/base16-ir-black.sh
     mafredri/zsh-async  # dependency of sindresorhus/pure
     sindresorhus/pure
     zsh-users/zsh-autosuggestions

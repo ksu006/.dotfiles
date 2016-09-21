@@ -8,7 +8,7 @@ endif
 
 " Use base16 color scheme
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-default-dark
+colorscheme base16-ir-black
 
 " YCM
 " ============================================================================
@@ -21,7 +21,7 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 " Airline
 " ============================================================================
 " Set color theme
-let g:airline_theme='base16'
+let g:airline_theme='jellybeans'
 let g:bufferline_echo=0
 
 " CtrlP
