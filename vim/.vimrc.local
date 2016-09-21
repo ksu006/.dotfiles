@@ -24,12 +24,9 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 let g:airline_theme='solarized'
 let g:bufferline_echo=0
 
-" CtrlP
-" ============================================================================
-" Only search filename rather than full path by default
-let g:ctrlp_by_filename = 1
-" Mapping for using CtrlP to switch buffers
-nnoremap <Leader>p :CtrlPBuffer<CR>
+" FZF
+nnoremap <C-P> :Files<CR>
+nnoremap <Leader>p :Buffers<CR>
 
 " Syntastic
 let g:syntastic_zsh_checkers = ['zsh']
