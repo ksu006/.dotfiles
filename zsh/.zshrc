@@ -34,6 +34,9 @@ antigen apply
 # cd to directory by just typing name
 setopt AUTO_CD
 
+# Discard older duplicate entries from history
+setopt HIST_IGNORE_ALL_DUPS
+
 # FZF
 if [[ ! -d $HOME/.fzf ]]; then
     git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
