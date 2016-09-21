@@ -22,12 +22,12 @@ fi
 
 antigen bundles <<EOBUNDLES
     chriskempson/base16-shell --loc=scripts/base16-default-dark.sh
+    mafredri/zsh-async  # dependency of sindresorhus/pure
+    sindresorhus/pure
     zsh-users/zsh-autosuggestions
     zsh-users/zsh-completions
     zsh-users/zsh-syntax-highlighting
 EOBUNDLES
-
-antigen theme ys
 
 antigen apply
 
