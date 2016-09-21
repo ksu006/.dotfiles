@@ -21,7 +21,7 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 " Airline
 " ============================================================================
 " Set color theme
-let g:airline_theme='jellybeans'
+let g:airline_theme='bubblegum'
 let g:bufferline_echo=0
 
 " CtrlP
