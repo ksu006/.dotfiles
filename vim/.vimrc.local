@@ -39,6 +39,11 @@ function! ColorColumnToggle()
   set colorcolumn?
 endfunction
 
+" Enable incremental command if available (i.e. neovim)
+if exists("+inccommand")
+  set inccommand=split
+endif
+
 if filereadable(expand("~/.vimrc.local.local"))
     source ~/.vimrc.local.local
 endif
