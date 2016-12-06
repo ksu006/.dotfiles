@@ -50,6 +50,4 @@ alias dot="cd $HOME/.dotfiles/"
 alias g=git
 alias ws=$HOME/workspace
 
-if [[ -f $HOME/.zshrc.local ]]; then
-    source $HOME/.zshrc.local
-fi
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
