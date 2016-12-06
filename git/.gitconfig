@@ -1,7 +1,5 @@
 [user]
 	name = Kevin Su
-[core]
-	editor = vim
 [color]
 	ui = true
 [pull]
