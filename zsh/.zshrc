@@ -3,7 +3,12 @@ typeset -U fpath
 
 path=($HOME/.local/bin $path)
 
-type "mvim" > /dev/null && export EDITOR="mvim -v" || export EDITOR="vim"
+if type "mvim" > /dev/null; then
+    export EDITOR="mvim -v"
+    alias vim="mvim -v"
+else
+    export EDITOR="vim"
+fi
 export HIST_STAMPS="yyyy-mm-dd"
 
 # Source antigen
