@@ -1,5 +1,4 @@
 typeset -U path
-typeset -U fpath
 
 path=($HOME/.local/bin $path)
 
