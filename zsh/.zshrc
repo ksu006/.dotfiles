@@ -11,43 +11,42 @@ else
 fi
 export HIST_STAMPS="yyyy-mm-dd"
 
-# Source antigen
-if [[ ! -d $HOME/.antigen/repos/antigen ]]; then
-    git clone https://github.com/zsh-users/antigen.git $HOME/.antigen/repos/antigen
+# zplug
+export ZPLUG_HOME=$HOME/.zplug
+if [[ ! -d $ZPLUG_HOME ]]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
 fi
-source $HOME/.antigen/repos/antigen/antigen.zsh
-
-antigen use oh-my-zsh
+source $ZPLUG_HOME/init.zsh
 
 # Homebrew
+# TODO: install homebrew from GitHub if not installed
 if [[ $OSTYPE == darwin* && -d $HOME/homebrew/bin ]]; then
     path=($HOME/homebrew/bin $path)
-    antigen bundle brew
 fi
 
-antigen bundles <<EOBUNDLES
-    chriskempson/base16-shell --loc=scripts/base16-ir-black.sh
-    mafredri/zsh-async  # dependency of sindresorhus/pure
-    sindresorhus/pure
-    zsh-users/zsh-autosuggestions
-    zsh-users/zsh-completions
-    zsh-users/zsh-syntax-highlighting
-EOBUNDLES
+zplug "chriskempson/base16-shell", as:command, use:"scripts/base16-ir-black.sh"
+zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
+zplug "mafredri/zsh-async", on:"sindresorhus/pure"
+zplug "plugins/brew", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "sindresorhus/pure"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-antigen apply
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load --verbose
 
 # cd to directory by just typing name
 setopt AUTO_CD
 
 # Discard older duplicate entries from history
 setopt HIST_IGNORE_ALL_DUPS
-
-# FZF
-if [[ ! -d $HOME/.fzf ]]; then
-    git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
-    $HOME/.fzf/install
-fi
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Aliases
 alias dl="cd $HOME/Downloads/"
