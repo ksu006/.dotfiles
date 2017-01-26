@@ -13,6 +13,7 @@ export HIST_STAMPS="yyyy-mm-dd"
 
 # zplug
 export ZPLUG_HOME=$HOME/.zplug
+export ZPLUG_LOADFILE=$HOME/.zplug.packages.zsh
 if [[ ! -d $ZPLUG_HOME ]]; then
     git clone https://github.com/zplug/zplug $ZPLUG_HOME
 fi
@@ -23,25 +24,6 @@ source $ZPLUG_HOME/init.zsh
 if [[ $OSTYPE == darwin* && -d $HOME/homebrew/bin ]]; then
     path=($HOME/homebrew/bin $path)
 fi
-
-zplug "chriskempson/base16-shell", use:"scripts/base16-ir-black.sh"
-zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
-zplug "mafredri/zsh-async", on:"sindresorhus/pure"
-zplug "plugins/brew", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "sindresorhus/pure"
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-zplug load --verbose
 
 # cd to directory by just typing name
 setopt AUTO_CD
