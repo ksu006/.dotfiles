@@ -14,9 +14,7 @@ export HIST_STAMPS="yyyy-mm-dd"
 # zplug
 export ZPLUG_HOME=$HOME/.zplug
 export ZPLUG_LOADFILE=$HOME/.zplug.packages.zsh
-if [[ ! -d $ZPLUG_HOME ]]; then
-    git clone https://github.com/zplug/zplug $ZPLUG_HOME
-fi
+[ -d $ZPLUG_HOME ] || git clone https://github.com/zplug/zplug $ZPLUG_HOME
 source $ZPLUG_HOME/init.zsh
 
 # Homebrew
