@@ -24,11 +24,12 @@ if [[ $OSTYPE == darwin* && -d $HOME/homebrew/bin ]]; then
     path=($HOME/homebrew/bin $path)
 fi
 
-zplug "chriskempson/base16-shell", as:command, use:"scripts/base16-ir-black.sh"
+zplug "chriskempson/base16-shell", use:"scripts/base16-ir-black.sh"
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
 zplug "mafredri/zsh-async", on:"sindresorhus/pure"
 zplug "plugins/brew", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "sindresorhus/pure"
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
