@@ -26,7 +26,7 @@ let g:bufferline_echo=0
 
 " FZF
 let g:ctrlp_map=''  " Remove ctrlp mapping
-nnoremap <C-P> :Files<CR>
+nnoremap <C-P> :GFiles<CR>
 nnoremap <Leader>p :Buffers<CR>
 
 " Syntastic
