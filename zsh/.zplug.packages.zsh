@@ -1,5 +1,6 @@
 zplug "chriskempson/base16-shell", use:"scripts/base16-ir-black.sh", defer:1
 zplug "junegunn/fzf", use:"shell/*.zsh", on:"junegunn/fzf-bin", defer:1
+zplug "junegunn/fzf", as:command, use:"bin/fzf-tmux", on:"junegunn/fzf-bin", hook-load:"export FZF_TMUX=1", defer:1
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, defer:1
 zplug "lib/*", from:oh-my-zsh
 zplug "mafredri/zsh-async", on:"sindresorhus/pure", defer:1
