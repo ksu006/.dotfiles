@@ -6,7 +6,6 @@ zplug "lib/*", from:oh-my-zsh
 zplug "mafredri/zsh-async", on:"sindresorhus/pure", defer:1
 zplug "sindresorhus/pure", defer:1
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
-zplug "zsh-users/zsh-autosuggestions", defer:1
 zplug "zsh-users/zsh-completions", defer:1
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 

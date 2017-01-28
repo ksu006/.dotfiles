@@ -2,15 +2,6 @@ typeset -U path
 
 path=($HOME/.local/bin $path)
 
-# Prefer MacVim if it is installed.
-if type "mvim" > /dev/null; then
-    export EDITOR="mvim -v"
-    alias vim="mvim -v"
-else
-    export EDITOR="vim"
-fi
-export HIST_STAMPS="yyyy-mm-dd"
-
 # zplug
 export ZPLUG_HOME=$HOME/.zplug
 export ZPLUG_LOADFILE=$HOME/.zplug.packages.zsh
@@ -22,9 +13,6 @@ source $ZPLUG_HOME/init.zsh
 if [[ $OSTYPE == darwin* && -d $HOME/homebrew/bin ]]; then
     path=($HOME/homebrew/bin $path)
 fi
-
-# cd to directory by just typing name.
-setopt AUTO_CD
 
 # Discard older duplicate entries from history.
 setopt HIST_IGNORE_ALL_DUPS
