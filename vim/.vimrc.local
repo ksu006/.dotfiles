@@ -10,6 +10,8 @@ endif
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-ir-black
 
+" Do not echo bufferline as it is already displayed in airline.
+let g:bufferline_echo=0
 
 " FZF
 let g:ctrlp_map=''  " Remove ctrlp mapping
