@@ -1,7 +1,10 @@
 Bundle 'chriskempson/base16-vim'
 Bundle 'tmux-plugins/vim-tmux'
-Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'airblade/vim-rooter'
 Bundle 'edkolev/tmuxline.vim'
-Bundle 'junegunn/fzf'
+if isdirectory($ZPLUG_REPOS."/junegunn/fzf")
+    Bundle "file://".$ZPLUG_REPOS."/junegunn/fzf"
+else
+    Bundle 'junegunn/fzf'
+endif
 Bundle 'junegunn/fzf.vim'
