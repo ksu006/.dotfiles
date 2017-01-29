@@ -10,12 +10,6 @@ endif
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-ir-black
 
-" YCM
-" jump to declaration
-nnoremap <Leader>jd :YcmCompleter GoTo<CR>
-map <2-LeftMouse> <Leader>jd
-" refresh
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 " FZF
 let g:ctrlp_map=''  " Remove ctrlp mapping
