@@ -1,3 +1,6 @@
+# zplug packages
+# See https://github.com/zplug/zplug
+
 # base16-shell - Syntax highlighting for hackers
 zplug "chriskempson/base16-shell", use:"scripts/base16-ir-black.sh"
 
