@@ -2,6 +2,8 @@ typeset -U path
 
 path=($HOME/.local/bin $path)
 
+export EDITOR=vim
+
 # zplug
 export ZPLUG_HOME=$HOME/.zplug
 export ZPLUG_LOADFILE=$HOME/.zplug.packages.zsh
