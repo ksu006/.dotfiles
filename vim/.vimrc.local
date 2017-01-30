@@ -7,19 +7,19 @@ if has('mouse_sgr')
 endif
 
 " Use base16 color scheme
+" base16-vim {
 let base16colorspace=256  " Access colors present in 256 colorspace
+" }
+
 colorscheme base16-ir-black
 
 " Do not echo bufferline as it is already displayed in airline.
 let g:bufferline_echo=0
 
-" FZF
-let g:ctrlp_map=''  " Remove ctrlp mapping
+" fzf.vim {
 nnoremap <C-P> :GFiles<CR>
 nnoremap <Leader>p :Buffers<CR>
-
-" Syntastic
-let g:syntastic_zsh_checkers = ['zsh']
+" }
 
 " Toggle colorcolumn to 1 greater than textwith
 nnoremap <Leader><bar> :call ColorColumnToggle()<CR>

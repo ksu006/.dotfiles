@@ -2,6 +2,10 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'tmux-plugins/vim-tmux'
 Bundle 'airblade/vim-rooter'
 Bundle 'edkolev/tmuxline.vim'
+
+" Replace ctrlp with fzf
+UnBundle 'ctrlpvim/ctrlp.vim'
+UnBundle 'tacahiroy/ctrlp-funky'
 if isdirectory($ZPLUG_REPOS."/junegunn/fzf")
     Bundle "file://".$ZPLUG_REPOS."/junegunn/fzf"
 else
