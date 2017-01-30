@@ -18,6 +18,7 @@ zplug "junegunn/fzf", as:command, use:"bin/fzf-tmux", on:"junegunn/fzf-bin", \
 zplug "lib/directories", from:oh-my-zsh
 zplug "lib/history", from:oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh
+zplug "plugins/zsh_reload", from:oh-my-zsh
 
 # pure - Pretty, minimal and fast zsh prompt
 zplug "sindresorhus/pure"
