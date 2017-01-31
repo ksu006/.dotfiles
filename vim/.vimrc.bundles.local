@@ -1,11 +1,11 @@
-Bundle 'chriskempson/base16-vim'
-Bundle 'tmux-plugins/vim-tmux'
-Bundle 'airblade/vim-rooter'
-Bundle 'edkolev/tmuxline.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'airblade/vim-rooter'
+Plug 'edkolev/tmuxline.vim'
 
 if isdirectory($ZPLUG_REPOS."/junegunn/fzf")
-    Bundle "file://".$ZPLUG_REPOS."/junegunn/fzf"
+    Plug $ZPLUG_REPOS.'/junegunn/fzf'
 else
-    Bundle 'junegunn/fzf'
+    Plug 'junegunn/fzf'
 endif
-Bundle 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
