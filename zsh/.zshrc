@@ -5,7 +5,7 @@ export EDITOR=vim
 # zplug
 export ZPLUG_HOME=~/.zplug
 export ZPLUG_LOADFILE=~/.zplug.packages.zsh
-[ -d $ZPLUG_HOME ] || git clone https://github.com/zplug/zplug $ZPLUG_HOME
+[ -d $ZPLUG_HOME ] || curl -sL zplug.sh/installer | zsh
 source $ZPLUG_HOME/init.zsh
 
 # Discard older duplicate entries from history.
