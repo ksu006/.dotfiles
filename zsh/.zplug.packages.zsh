@@ -9,6 +9,7 @@ zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "lib/directories", from:oh-my-zsh
 zplug "lib/history", from:oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh
+zplug "lib/termsupport", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 
 # base16-shell - Syntax highlighting for hackers
