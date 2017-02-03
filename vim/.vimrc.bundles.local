@@ -1,6 +1,5 @@
 Plug 'chriskempson/base16-vim'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'airblade/vim-rooter'
 Plug 'edkolev/tmuxline.vim'
 
 if isdirectory($ZPLUG_REPOS."/junegunn/fzf")
