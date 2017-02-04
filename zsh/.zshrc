@@ -2,6 +2,9 @@ path=(~/.local/bin $path)
 
 export EDITOR=vim
 
+export GOPATH=$HOME/code/go
+path=($HOME/.local/bin $GOPATH $GOPATH/bin $path)
+
 # zplug
 export ZPLUG_HOME=~/.zplug
 export ZPLUG_LOADFILE=~/.zplug.packages.zsh
