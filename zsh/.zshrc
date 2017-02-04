@@ -12,9 +12,9 @@ source $ZPLUG_HOME/init.zsh
 setopt HIST_IGNORE_ALL_DUPS
 
 # Aliases
+alias code='cd ~/code'
 alias dl='cd ~/Downloads/'
 alias dot='cd ~/.dotfiles/'
 alias g='git'
-alias ws='cd ~/workspace'
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
