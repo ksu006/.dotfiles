@@ -13,7 +13,7 @@ zplug "lib/termsupport", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 
 # base16-shell - Syntax highlighting for hackers
-zplug "chriskempson/base16-shell", use:"scripts/base16-ir-black.sh"
+zplug "chriskempson/base16-shell", use:"scripts/base16-irblack.sh"
 
 # pure - Pretty, minimal and fast zsh prompt
 zplug "sindresorhus/pure"
