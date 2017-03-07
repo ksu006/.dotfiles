@@ -7,6 +7,7 @@ endif
 
 " Plugins (junegunn/vim-plug)
 call plug#begin()
+Plug 'chriskempson/base16-vim'
 if isdirectory($ZPLUG_REPOS.'/junegunn/fzf')
   Plug $ZPLUG_REPOS.'/junegunn/fzf'
 else
@@ -34,6 +35,10 @@ call plug#end()
 " Key Remappings
 map <space> <leader>
 nnoremap <leader>s :write<CR>
+
+" base16-vim
+let base16colorspace=256
+colorscheme base16-irblack
 
 " fzf.vim
 nnoremap <leader>o :Files<CR>
