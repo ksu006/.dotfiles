@@ -36,7 +36,7 @@ map <space> <leader>
 nnoremap <leader>s :write<CR>
 
 " fzf.vim
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>o :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " matchit.vim
@@ -45,6 +45,7 @@ runtime macros/matchit.vim
 " nerdtree
 nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
 
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
