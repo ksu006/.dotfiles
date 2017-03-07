@@ -1,3 +1,6 @@
+# Disable CTRL-S and CTRL-Q
+[[ $- =~ i ]] && stty -ixoff -ixon
+
 export EDITOR=vim
 
 export GOPATH=~/code/go

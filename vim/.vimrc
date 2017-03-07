@@ -27,6 +27,7 @@ set undodir=/tmp//,.
 call plug#begin()
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'easymotion/vim-easymotion'
 if isdirectory($ZPLUG_REPOS.'/junegunn/fzf')
   Plug $ZPLUG_REPOS.'/junegunn/fzf'
 else
@@ -56,8 +57,8 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Key Remappings
-map <space> <leader>
-nnoremap <leader>s :write<CR>
+let mapleader = "\<Space>"
+nnoremap <leader>s :update<CR>
 
 " base16-vim
 let base16colorspace=256
