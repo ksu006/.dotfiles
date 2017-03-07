@@ -1,12 +1,31 @@
 " General Settings
-set shell=$SHELL
-set pastetoggle=<F12>
+set autoindent
+set backspace=indent,eol,start
+set backupdir=/tmp//,.
+set clipboard=unnamed
+if has('unnamedplus')
+  set clipboard+=unnamedplus
+endif
 if exists('&colorcolumn')
   set colorcolumn=+1
 endif
+set directory=/tmp//,.
+set hidden
+set hlsearch
+set ignorecase
+set incsearch
+set mouse=a
+set nojoinspaces
+set number
+set pastetoggle=<F12>
+set shell=$SHELL
+set smartcase
+set smartindent
+set undodir=/tmp//,.
 
 " Plugins (junegunn/vim-plug)
 call plug#begin()
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'chriskempson/base16-vim'
 if isdirectory($ZPLUG_REPOS.'/junegunn/fzf')
   Plug $ZPLUG_REPOS.'/junegunn/fzf'
@@ -21,14 +40,17 @@ Plug 'mhinz/vim-signify'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 call plug#end()
