@@ -32,6 +32,7 @@ else
 endif
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
@@ -65,9 +66,6 @@ colorscheme base16-irblack
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 nnoremap <leader>o :Files<CR>
 nnoremap <leader>b :Buffers<CR>
-
-" matchit.vim
-runtime macros/matchit.vim
 
 " nerdtree
 nnoremap <leader>n :NERDTreeToggle<CR>
