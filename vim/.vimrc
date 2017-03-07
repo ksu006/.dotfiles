@@ -65,6 +65,7 @@ let base16colorspace=256
 colorscheme base16-irblack
 
 " fzf.vim
+let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 nnoremap <leader>o :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
