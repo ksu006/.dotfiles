@@ -59,6 +59,7 @@ call plug#end()
 " Key Remappings
 let mapleader="\<Space>"
 nnoremap <leader>s :update<CR>
+nnoremap <leader>q :quit<CR>
 
 " base16-vim
 let base16colorspace=256
@@ -66,7 +67,7 @@ colorscheme base16-irblack
 
 " fzf.vim
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-nnoremap <leader>o :Files<CR>
+nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " nerdtree
