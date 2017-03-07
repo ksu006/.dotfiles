@@ -1,6 +1,4 @@
 " General Settings
-set autoindent
-set backspace=indent,eol,start
 set backupdir=/tmp//,.
 set clipboard=unnamed
 if has('unnamedplus')
@@ -13,7 +11,6 @@ set directory=/tmp//,.
 set hidden
 set hlsearch
 set ignorecase
-set incsearch
 set mouse=a
 set nojoinspaces
 set number
