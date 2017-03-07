@@ -36,6 +36,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'luochen1990/rainbow'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
 Plug 'rhysd/conflict-marker.vim'
@@ -74,6 +75,9 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
+
+" rainbow
+let g:rainbow_active=1
 
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
