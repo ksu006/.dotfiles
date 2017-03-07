@@ -1,4 +1,5 @@
 " General Settings
+set backup
 set backupdir=/tmp//,.
 set clipboard=unnamed
 if has('unnamedplus')
@@ -19,6 +20,7 @@ set shell=$SHELL
 set smartcase
 set smartindent
 set undodir=/tmp//,.
+set undofile
 
 " Plugins (junegunn/vim-plug)
 call plug#begin()
