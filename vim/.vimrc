@@ -57,7 +57,7 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Key Remappings
-let mapleader = "\<Space>"
+let mapleader="\<Space>"
 nnoremap <leader>s :update<CR>
 
 " base16-vim
@@ -83,7 +83,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 let g:airline_powerline_fonts=1
 
 " vim-signify
-let g:signify_vcs_list = ['git']
+let g:signify_vcs_list=['git']
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
