@@ -86,7 +86,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gs :Gstatus<CR>
+nmap <Leader>gs :Gstatus<CR>gg<c-n>
 
 " vim-signify
 let g:signify_vcs_list = ['git']
