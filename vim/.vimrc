@@ -27,8 +27,8 @@ call plug#begin()
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
-if isdirectory($ZPLUG_REPOS.'/junegunn/fzf')
-  Plug $ZPLUG_REPOS.'/junegunn/fzf'
+if isdirectory($ZPLUG_REPOS . '/junegunn/fzf')
+  Plug $ZPLUG_REPOS . '/junegunn/fzf'
 else
   Plug 'junegunn/fzf'
 endif
@@ -58,26 +58,26 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Key Remappings
-let mapleader="\<Space>"
+let mapleader = "\<Space>"
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :quit<CR>
 
 " base16-vim
-let base16colorspace=256
+let base16colorspace = 256
 colorscheme base16-irblack
 
 " fzf.vim
-let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " nerdtree
 nnoremap <leader>n :NERDTreeToggle<CR>
-let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden = 1
 
 " rainbow
-let g:rainbow_active=1
+let g:rainbow_active = 1
 
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
@@ -89,7 +89,7 @@ nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gs :Gstatus<CR>
 
 " vim-signify
-let g:signify_vcs_list=['git']
+let g:signify_vcs_list = ['git']
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
