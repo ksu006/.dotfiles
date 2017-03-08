@@ -9,6 +9,7 @@ if exists('&colorcolumn')
   set colorcolumn=+1
 endif
 set directory=/tmp//,.
+set expandtab
 set hidden
 set hlsearch
 set ignorecase
