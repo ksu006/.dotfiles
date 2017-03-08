@@ -91,10 +91,7 @@ let g:tmuxline_powerline_separators = 0
 nnoremap <leader>u :UndotreeToggle<CR>
 
 " vim-fugitive
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gr :Gread<CR>
-nmap <Leader>gs :Gstatus<CR>gg<c-n>
+nmap <Leader>g :Gstatus<CR>gg<c-n>
 
 " vim-signify
 let g:signify_vcs_list = ['git']
