@@ -27,6 +27,7 @@ call plug#begin()
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'edkolev/tmuxline.vim'
 if isdirectory($ZPLUG_REPOS . '/junegunn/fzf')
   Plug $ZPLUG_REPOS . '/junegunn/fzf'
 else
@@ -63,8 +64,10 @@ nnoremap <leader>s :update<CR>
 nnoremap <leader>q :quit<CR>
 
 " base16-vim
-let base16colorspace = 256
-colorscheme base16-irblack
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " fzf.vim
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
@@ -78,6 +81,9 @@ let NERDTreeShowHidden = 1
 
 " rainbow
 let g:rainbow_active = 1
+
+" tmuxline.vim
+let g:tmuxline_powerline_separators = 0
 
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
