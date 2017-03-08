@@ -82,9 +82,6 @@ let g:rainbow_active=1
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
 
-" vim-airline
-let g:airline_powerline_fonts=1
-
 " vim-fugitive
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
