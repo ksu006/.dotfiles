@@ -3,8 +3,8 @@ set -e
 
 cd ${0:a:h}
 DIR=$(pwd)
+mkdir -pv bak
 for rc in *rc gitconfig tmux.conf; do
-  mkdir -pv bak
   [ -e ~/.$rc ] && mv -v ~/.$rc bak/.$rc
   ln -sfv $DIR/$rc ~/.$rc
 done
