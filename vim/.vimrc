@@ -63,6 +63,7 @@ call plug#end()
 " Key Remappings
 let mapleader = "\<Space>"
 nnoremap <leader>s :update<CR>
+nnoremap <leader>r :edit<CR>
 nnoremap <leader>q :quit<CR>
 
 " base16-vim
