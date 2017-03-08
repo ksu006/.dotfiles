@@ -1,4 +1,5 @@
 " General Settings
+set autoread
 set backup
 set backupdir=/tmp//,.
 set clipboard=unnamed
