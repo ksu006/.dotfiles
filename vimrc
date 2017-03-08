@@ -80,7 +80,6 @@ nnoremap <leader>b :Buffers<CR>
 " nerdtree
 nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
-let NERDTreeShowHidden = 1
 
 " rainbow
 let g:rainbow_active = 1
