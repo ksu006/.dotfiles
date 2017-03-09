@@ -15,8 +15,6 @@ alias dl='cd ~/Downloads'
 alias dot='cd ~/dotfiles'
 alias g='git'
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
 # zplug
 export ZPLUG_HOME=~/.zplug
 [ -d $ZPLUG_HOME ] || git clone https://github.com/zplug/zplug $ZPLUG_HOME
@@ -58,3 +56,5 @@ zplug "junegunn/fzf", as:command, use:"bin/fzf-tmux", on:"junegunn/fzf-bin", \
     hook-load:"export FZF_TMUX=1"
 
 zplug load
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
