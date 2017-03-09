@@ -44,6 +44,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'luochen1990/rainbow'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
+Plug 'miyakogi/seiya.vim'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -83,6 +84,9 @@ let NERDTreeQuitOnOpen = 1
 
 " rainbow
 let g:rainbow_active = 1
+
+" seiya.vim
+let g:seiya_auto_enable = 1
 
 " tmuxline.vim
 let g:tmuxline_powerline_separators = 0
