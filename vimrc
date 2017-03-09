@@ -1,4 +1,6 @@
 " General Settings
+let mapleader = "\<Space>"
+
 set autoread
 set backup
 set backupdir=/tmp//,.
@@ -17,7 +19,7 @@ set ignorecase
 set mouse=a
 set nojoinspaces
 set number
-set pastetoggle=<F2>
+set pastetoggle=<leader>p
 set shell=$SHELL
 set smartcase
 set smartindent
@@ -61,7 +63,6 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Key Remappings
-let mapleader = "\<Space>"
 nnoremap <leader>s :update<CR>
 nnoremap <leader>r :edit<CR>
 nnoremap <leader>q :quit<CR>
