@@ -73,7 +73,6 @@ if filereadable(expand("~/.vimrc_background"))
 endif
 
 " fzf.vim
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
