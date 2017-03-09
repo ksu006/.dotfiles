@@ -44,6 +44,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'luochen1990/rainbow'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
+Plug 'reedes/vim-pencil'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -62,10 +63,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
-" Key Remappings
-nnoremap <leader>s :update<CR>
-nnoremap <leader>r :edit<CR>
-nnoremap <leader>q :quit<CR>
+" Toggle spell check
+nnoremap <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " base16-vim
 if filereadable(expand("~/.vimrc_background"))
@@ -76,6 +75,9 @@ endif
 " fzf.vim
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
+
+" goyo.vim, limelight.vim, vim-pencil
+nnoremap <leader>w :Goyo <bar> :Limelight!! <bar> :TogglePencil <CR>
 
 " nerdtree
 nnoremap <leader>n :NERDTreeToggle<CR>
