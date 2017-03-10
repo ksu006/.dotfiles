@@ -5,9 +5,6 @@ set autoread
 set backup
 set backupdir=/tmp//,.
 set clipboard=unnamed
-if has('unnamedplus')
-  set clipboard+=unnamedplus
-endif
 if exists('&colorcolumn')
   set colorcolumn=+1
 endif
@@ -19,15 +16,19 @@ set ignorecase
 set mouse=a
 set nojoinspaces
 set number
-set pastetoggle=<leader>p
+set pastetoggle=<F2>
 set shell=$SHELL
 set smartcase
 set smartindent
 set undodir=/tmp//,.
 set undofile
 
+augroup vimrc
+  autocmd!
+augroup END
+
 " Spell check
-autocmd FileType gitcommit,markdown setlocal spell
+autocmd vimrc FileType gitcommit,markdown setlocal spell
 
 " Plugins (junegunn/vim-plug)
 call plug#begin()
@@ -51,6 +52,7 @@ Plug 'reedes/vim-pencil'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'svermeulen/vim-easyclip'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-commentary'
@@ -87,10 +89,7 @@ let NERDTreeQuitOnOpen = 1
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " rainbow_parentheses.vim
-augroup rainbow
-  autocmd!
-  autocmd FileType * RainbowParentheses 
-augroup END
+autocmd vimrc FileType * RainbowParentheses 
 
 " tmuxline.vim
 let g:tmuxline_powerline_separators = 0
