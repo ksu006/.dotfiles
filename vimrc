@@ -43,8 +43,8 @@ endif
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'luochen1990/rainbow'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
 Plug 'reedes/vim-pencil'
@@ -80,14 +80,17 @@ nnoremap <leader>b :Buffers<CR>
 let g:pencil#wrapModeDefault = 'soft'
 autocmd! User GoyoEnter Limelight | Pencil
 autocmd! User GoyoLeave Limelight! | NoPencil
-nnoremap <leader>w :Goyo<CR>
+nnoremap <leader>G :Goyo<CR>
 
 " nerdtree
-nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
+nnoremap <leader>n :NERDTreeToggle<CR>
 
-" rainbow
-let g:rainbow_active = 1
+" rainbow_parentheses.vim
+augroup rainbow
+  autocmd!
+  autocmd FileType * RainbowParentheses 
+augroup END
 
 " tmuxline.vim
 let g:tmuxline_powerline_separators = 0
