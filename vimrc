@@ -5,9 +5,7 @@ set autoread
 set backup
 set backupdir=/tmp//,.
 set clipboard=unnamed
-if exists('&colorcolumn')
-  set colorcolumn=+1
-endif
+set colorcolumn=+1
 set directory=/tmp//,.
 set expandtab
 set hidden
