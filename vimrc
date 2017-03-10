@@ -67,7 +67,7 @@ call plug#end()
 nnoremap <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " base16-vim
-if filereadable(expand("~/.vimrc_background"))
+if filereadable(expand('~/.vimrc_background'))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
@@ -77,7 +77,10 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " goyo.vim, limelight.vim, vim-pencil
-nnoremap <leader>w :Goyo <bar> :Limelight!! <bar> :TogglePencil <CR>
+let g:pencil#wrapModeDefault = 'soft'
+autocmd! User GoyoEnter Limelight | Pencil
+autocmd! User GoyoLeave Limelight! | NoPencil
+nnoremap <leader>w :Goyo<CR>
 
 " nerdtree
 nnoremap <leader>n :NERDTreeToggle<CR>
