@@ -26,6 +26,9 @@ set smartindent
 set undodir=/tmp//,.
 set undofile
 
+" Spell check
+autocmd FileType gitcommit,markdown setlocal spell
+
 " Plugins (junegunn/vim-plug)
 call plug#begin()
 Plug 'AndrewRadev/splitjoin.vim'
@@ -62,9 +65,6 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 call plug#end()
-
-" Toggle spell check
-nnoremap <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " base16-vim
 if filereadable(expand('~/.vimrc_background'))
