@@ -78,10 +78,8 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " goyo.vim, limelight.vim, vim-pencil
-let g:pencil#wrapModeDefault = 'soft'
 autocmd! User GoyoEnter Limelight | Pencil
 autocmd! User GoyoLeave Limelight! | NoPencil
-nnoremap <leader>G :Goyo<CR>
 
 " nerdtree
 let NERDTreeQuitOnOpen = 1
