@@ -34,6 +34,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
+Plug 'honza/vim-snippets'
 if isdirectory($ZPLUG_REPOS . '/junegunn/fzf')
   Plug $ZPLUG_REPOS . '/junegunn/fzf'
 else
@@ -50,6 +51,7 @@ Plug 'reedes/vim-pencil'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'SirVer/ultisnips'
 Plug 'svermeulen/vim-easyclip'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
@@ -88,6 +90,11 @@ autocmd vimrc FileType * RainbowParentheses
 
 " tmuxline.vim
 let g:tmuxline_powerline_separators = 0
+
+" ultisnips
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
