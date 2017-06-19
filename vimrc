@@ -35,19 +35,12 @@ Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
 Plug 'honza/vim-snippets'
-if isdirectory($ZPLUG_REPOS . '/junegunn/fzf')
-  Plug $ZPLUG_REPOS . '/junegunn/fzf'
-else
-  Plug 'junegunn/fzf'
-endif
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
-Plug 'reedes/vim-pencil'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -77,16 +70,12 @@ endif
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 
-" goyo.vim, limelight.vim, vim-pencil
-autocmd! User GoyoEnter Limelight | Pencil
-autocmd! User GoyoLeave Limelight! | NoPencil
-
 " nerdtree
 let NERDTreeQuitOnOpen = 1
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " rainbow_parentheses.vim
-autocmd vimrc FileType * RainbowParentheses 
+autocmd vimrc FileType * RainbowParentheses
 
 " tmuxline.vim
 let g:tmuxline_powerline_separators = 0
