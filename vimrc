@@ -25,6 +25,9 @@ augroup vimrc
   autocmd!
 augroup END
 
+" Remap jj to <Esc>
+inoremap jj <Esc>
+
 " Spell check
 autocmd vimrc FileType gitcommit,markdown setlocal spell
 
