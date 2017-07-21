@@ -14,7 +14,7 @@ set ignorecase
 set mouse=a
 set nojoinspaces
 set number
-set pastetoggle=<F2>
+set pastetoggle=<F12>
 set shell=$SHELL
 set smartcase
 set smartindent
