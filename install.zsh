@@ -8,3 +8,6 @@ for rc in *rc gitconfig tmux.conf; do
   [ -e ~/.$rc ] && mv -v ~/.$rc bak/.$rc
   ln -sfv $DIR/$rc ~/.$rc
 done
+for bin in bin/*; do
+  ln -sfv $DIR/$bin ~/.local/$bin
+done

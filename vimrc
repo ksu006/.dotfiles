@@ -97,6 +97,16 @@ nmap <Leader>g :Gstatus<CR>gg<c-n>
 " vim-signify
 let g:signify_vcs_list = ['git']
 
+" https://sunaku.github.io/tmux-yank-osc52.html
+" copy the current text selection to the system clipboard
+if has('gui_running') || has('nvim') && exists('$DISPLAY')
+  noremap <Leader>y "+y
+else
+  " copy to attached terminal using the yank(1) script:
+  " https://github.com/sunaku/home/blob/master/bin/yank
+  noremap <silent> <Leader>y y:call system('yank > /dev/tty', @0)<Return>
+endif
+
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
