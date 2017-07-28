@@ -35,7 +35,7 @@ zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "chriskempson/base16-shell", hook-load:"base16_default-dark"
 
 # pure
-zplug "sindresorhus/pure"
+zplug "sindresorhus/pure", use:"pure.zsh", as:theme
 zplug "mafredri/zsh-async", on:"sindresorhus/pure"
 
 # zsh-completions
