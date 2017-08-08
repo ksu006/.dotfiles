@@ -95,7 +95,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 nmap <Leader>g :Gstatus<CR>gg<c-n>
 
 " vim-signify
-let g:signify_vcs_list = ['git']
+let g:signify_vcs_list = ['git', 'hg']
 
 " https://sunaku.github.io/tmux-yank-osc52.html
 " copy the current text selection to the system clipboard
