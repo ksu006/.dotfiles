@@ -51,9 +51,6 @@ zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
 zplug "junegunn/fzf", use:"shell/*.zsh", on:"junegunn/fzf-bin", \
     hook-load:"export FZF_DEFAULT_OPTS='--exact'", defer:1  # Source plugin after 'lib/key-bindings'
                                                             # as they both rebind ctrl+r.
-# Open fzf in tmux pane if running in tmux.
-zplug "junegunn/fzf", as:command, use:"bin/fzf-tmux", on:"junegunn/fzf-bin", \
-    hook-load:"export FZF_TMUX=1"
 
 zplug load
 
