@@ -37,6 +37,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
+Plug 'haya14busa/vim-poweryank'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -94,18 +95,11 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " vim-fugitive
 nmap <Leader>g :Gstatus<CR>gg<c-n>
 
+" vim-poweryank
+map <Leader>y <Plug>(operator-poweryank-osc52)
+
 " vim-signify
 let g:signify_vcs_list = ['git', 'hg']
-
-" https://sunaku.github.io/tmux-yank-osc52.html
-" copy the current text selection to the system clipboard
-if has('gui_running') || has('nvim') && exists('$DISPLAY')
-  noremap <Leader>y "+y
-else
-  " copy to attached terminal using the yank(1) script:
-  " https://github.com/sunaku/home/blob/master/bin/yank
-  noremap <silent> <Leader>y y:call system('yank > /dev/tty', @0)<Return>
-endif
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
