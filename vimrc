@@ -49,7 +49,6 @@ Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -66,7 +65,7 @@ call plug#end()
 
 " base16-vim
 if filereadable(expand('~/.vimrc_background'))
-  let base16colorspace=256
+  let base16colorspace = 256
   source ~/.vimrc_background
 endif
 
