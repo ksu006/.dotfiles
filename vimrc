@@ -70,12 +70,12 @@ if filereadable(expand('~/.vimrc_background'))
 endif
 
 " fzf.vim
-nnoremap <leader>f :Files<CR>
-nnoremap <leader>b :Buffers<CR>
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
 
 " nerdtree
 let NERDTreeQuitOnOpen = 1
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " rainbow_parentheses.vim
 autocmd vimrc FileType * RainbowParentheses
@@ -89,7 +89,7 @@ let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " undotree
-nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <Leader>u :UndotreeToggle<CR>
 
 " vim-fugitive
 nmap <Leader>g :Gstatus<CR>gg<c-n>
