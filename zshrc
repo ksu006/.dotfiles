@@ -3,8 +3,7 @@
 
 export EDITOR=vim
 
-export GOPATH=~/code/go
-path=(~/.local/bin $GOPATH $GOPATH/bin $path)
+path=(~/.local/bin $path)
 
 # Discard older duplicate entries from history.
 setopt HIST_IGNORE_ALL_DUPS
