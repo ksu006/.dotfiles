@@ -33,7 +33,6 @@ autocmd vimrc FileType gitcommit,markdown setlocal spell
 
 " Plugins (junegunn/vim-plug)
 call plug#begin()
-Plug 'AndrewRadev/splitjoin.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
