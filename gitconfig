@@ -36,8 +36,6 @@
 	std = stash drop
 	stl = stash list
 	stp = stash pop
-	ll = log --stat
-	lp = log -p
 [commit]
 	verbose = true
 [include]
