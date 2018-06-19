@@ -14,43 +14,41 @@ alias dl='cd ~/Downloads'
 alias dot='cd ~/dotfiles'
 alias g='git'
 
-# zplug
-export ZPLUG_HOME=~/.zplug
-[ -d $ZPLUG_HOME ] || git clone https://github.com/zplug/zplug $ZPLUG_HOME
-source $ZPLUG_HOME/init.zsh
+# zgen
+ZGEN_HOME=~/.zgen
+[ -d $ZGEN_HOME ] || git clone https://github.com/tarjoilija/zgen.git $ZGEN_HOME
+source $ZGEN_HOME/zgen.zsh
 
-# zplug
-# Manage zplug itself like other packages.
-zplug "zplug/zplug", hook-build:"zplug --self-manage"
+if ! zgen saved; then
+  # oh-my-zsh
+  zgen oh-my-zsh
+  zgen oh-my-zsh plugins/zsh_reload
 
-# oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
-zplug "lib/history", from:oh-my-zsh
-zplug "lib/key-bindings", from:oh-my-zsh
-zplug "lib/termsupport", from:oh-my-zsh
-zplug "plugins/zsh_reload", from:oh-my-zsh
+  # base16-shell
+  zgen load chriskempson/base16-shell
 
-# base16-shell
-zplug "chriskempson/base16-shell", hook-load:"base16_default-dark"
+  # pure
+  zgen load mafredri/zsh-async
+  zgen load sindresorhus/pure
 
-# pure
-zplug "sindresorhus/pure", use:"pure.zsh", as:theme
-zplug "mafredri/zsh-async", on:"sindresorhus/pure"
+  # zsh-completions
+  zgen load zsh-users/zsh-completions
 
-# zsh-completions
-zplug "zsh-users/zsh-completions"
+  # zsh-syntax-highlighting
+  zgen load zsh-users/zsh-syntax-highlighting
 
-# zsh-syntax-highlighting
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+  # fzf
+  FZF_GITHUB_REPO=junegunn/fzf
+  FZF_GITHUB_BRANCH=master
+  zgen load $FZF_GITHUB_REPO shell/completion.zsh $FZF_GITHUB_BRANCH && \
+  zgen load $FZF_GITHUB_REPO shell/key-bindings.zsh $FZF_GITHUB_BRANCH && \
+  $ZGEN_HOME/$FZF_GITHUB_REPO-$FZF_GITHUB_BRANCH/install --bin && \
+  path=($ZGEN_HOME/$FZF_GITHUB_REPO-$FZF_GITHUB_BRANCH/bin $path)
+  unset FZF_GITHUB_BRANCH
+  unset FZF_GITHUB_REPO
 
-# fzf
-# Command-line binary.
-zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf
-# Completion and key-bindings for zsh.
-zplug "junegunn/fzf", use:"shell/*.zsh", on:"junegunn/fzf-bin", \
-    hook-load:"export FZF_DEFAULT_OPTS='--exact'", defer:1  # Source plugin after 'lib/key-bindings'
-                                                            # as they both rebind ctrl+r.
-
-zplug load
+  zgen save
+  unset ZGEN_HOME
+fi
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
