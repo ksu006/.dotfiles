@@ -3,7 +3,7 @@
 
 export EDITOR=vim
 
-path=(~/.local/bin $path)
+path=(~/.fzf/bin ~/.local/bin $path)
 
 # Discard older duplicate entries from history.
 setopt HIST_IGNORE_ALL_DUPS
@@ -18,6 +18,7 @@ alias g='git'
 ZGEN_HOME=~/.zgen
 [ -d $ZGEN_HOME ] || git clone https://github.com/tarjoilija/zgen.git $ZGEN_HOME
 source $ZGEN_HOME/zgen.zsh
+unset ZGEN_HOME
 
 if ! zgen saved; then
   # oh-my-zsh
@@ -38,17 +39,11 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting
 
   # fzf
-  FZF_GITHUB_REPO=junegunn/fzf
-  FZF_GITHUB_BRANCH=master
-  zgen load $FZF_GITHUB_REPO shell/completion.zsh $FZF_GITHUB_BRANCH && \
-  zgen load $FZF_GITHUB_REPO shell/key-bindings.zsh $FZF_GITHUB_BRANCH && \
-  $ZGEN_HOME/$FZF_GITHUB_REPO-$FZF_GITHUB_BRANCH/install --bin && \
-  path=($ZGEN_HOME/$FZF_GITHUB_REPO-$FZF_GITHUB_BRANCH/bin $path)
-  unset FZF_GITHUB_BRANCH
-  unset FZF_GITHUB_REPO
+  command -v fzf >/dev/null 2>&1 && \
+  zgen load junegunn/fzf shell/completion.zsh && \
+  zgen load junegunn/fzf shell/key-bindings.zsh 
 
   zgen save
-  unset ZGEN_HOME
 fi
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
