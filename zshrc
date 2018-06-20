@@ -23,6 +23,7 @@ unset ZGEN_HOME
 if ! zgen saved; then
   # oh-my-zsh
   zgen oh-my-zsh
+  zgen oh-my-zsh plugins/common-aliases
   zgen oh-my-zsh plugins/zsh_reload
 
   # base16-shell
@@ -39,9 +40,10 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting
 
   # fzf
-  command -v fzf >/dev/null 2>&1 && \
-  zgen load junegunn/fzf shell/completion.zsh && \
-  zgen load junegunn/fzf shell/key-bindings.zsh 
+  if command -v fzf > /dev/null 2>&1; then
+    zgen load junegunn/fzf shell/completion.zsh
+    zgen load junegunn/fzf shell/key-bindings.zsh
+  fi
 
   zgen save
 fi
