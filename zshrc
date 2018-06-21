@@ -3,7 +3,7 @@
 
 export EDITOR=vim
 
-path=(~/.fzf/bin ~/.local/bin $path)
+path=(~/.local/bin $path)
 
 # Discard older duplicate entries from history.
 setopt HIST_IGNORE_ALL_DUPS
@@ -39,13 +39,10 @@ if ! zgen saved; then
   # zsh-syntax-highlighting
   zgen load zsh-users/zsh-syntax-highlighting
 
-  # fzf
-  if command -v fzf > /dev/null 2>&1; then
-    zgen load junegunn/fzf shell/completion.zsh
-    zgen load junegunn/fzf shell/key-bindings.zsh
-  fi
-
   zgen save
 fi
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
