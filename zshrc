@@ -3,7 +3,8 @@
 
 export EDITOR=vim
 
-path=(~/.local/bin $path)
+typeset -U path
+path=(~/bin ~/.local/bin $path)
 
 # Discard older duplicate entries from history.
 setopt HIST_IGNORE_ALL_DUPS
