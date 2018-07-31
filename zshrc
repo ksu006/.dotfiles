@@ -15,6 +15,9 @@ alias dl='cd ~/Downloads'
 alias dot='cd ~/dotfiles'
 alias g='git'
 
+# Disable oh-my-zsh auto update prompt.
+DISABLE_AUTO_UPDATE=true
+
 # zgen
 ZGEN_DIR=~/.zgen
 [ -d $ZGEN_DIR ] || git clone https://github.com/tarjoilija/zgen.git $ZGEN_DIR
