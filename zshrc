@@ -16,10 +16,9 @@ alias dot='cd ~/dotfiles'
 alias g='git'
 
 # zgen
-ZGEN_HOME=~/.zgen
-[ -d $ZGEN_HOME ] || git clone https://github.com/tarjoilija/zgen.git $ZGEN_HOME
-source $ZGEN_HOME/zgen.zsh
-unset ZGEN_HOME
+ZGEN_DIR=~/.zgen
+[ -d $ZGEN_DIR ] || git clone https://github.com/tarjoilija/zgen.git $ZGEN_DIR
+source $ZGEN_DIR/zgen.zsh
 
 if ! zgen saved; then
   # oh-my-zsh
