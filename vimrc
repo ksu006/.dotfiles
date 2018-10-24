@@ -73,6 +73,11 @@ endif
 " fzf.vim
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
+let $FZF_DEFAULT_COMMAND='
+  \ hg files 2> /dev/null ||
+  \ git ls-files 2> /dev/null ||
+  \ ag --filename-pattern ""
+  \'
 
 " nerdtree
 let NERDTreeQuitOnOpen = 1
@@ -99,7 +104,7 @@ nmap <Leader>g :Gstatus<CR>gg<c-n>
 map <Leader>y <Plug>(operator-poweryank-osc52)
 
 " vim-signify
-let g:signify_vcs_list = ['git', 'hg']
+let g:signify_vcs_list = ['hg', 'git']
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
