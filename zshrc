@@ -10,10 +10,10 @@ path=(~/bin ~/.local/bin $path)
 setopt HIST_IGNORE_ALL_DUPS
 
 # Aliases
-alias code='cd ~/code'
 alias dl='cd ~/Downloads'
 alias dot='cd ~/dotfiles'
 alias g='git'
+alias ws='cd ~/workspace'
 
 # Disable oh-my-zsh auto update prompt.
 DISABLE_AUTO_UPDATE=true
