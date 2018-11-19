@@ -4,7 +4,7 @@ let mapleader = "\<Space>"
 set autoread
 set backup
 set backupdir=/tmp//,.
-set clipboard=unnamed
+set clipboard^=unnamed
 set colorcolumn=+1
 set directory=/tmp//,.
 set expandtab
