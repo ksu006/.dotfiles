@@ -2,6 +2,7 @@
 [[ $- =~ i ]] && stty -ixoff -ixon
 
 export EDITOR=vim
+export LESS=-FRX
 
 typeset -U path
 path=(~/bin ~/.local/bin $path)
