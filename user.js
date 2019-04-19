@@ -11,6 +11,7 @@ user_pref("dom.battery.enabled", false);
 user_pref("dom.event.clipboardevents.enabled", false);
 user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%20/%20/");
 user_pref("extensions.pocket.enabled", false);
+user_pref("general.warnOnAboutConfig", false);
 user_pref("geo.enabled", false);
 user_pref("media.eme.enabled", true);
 user_pref("media.navigator.enabled", false);
