@@ -31,6 +31,12 @@ inoremap jj <Esc>
 " Spell check
 autocmd vimrc FileType gitcommit,markdown setlocal spell
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Plugins (junegunn/vim-plug)
 call plug#begin()
 Plug 'chriskempson/base16-vim'
