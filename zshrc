@@ -30,9 +30,6 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/common-aliases
   zgen oh-my-zsh plugins/zsh_reload
 
-  # base16-shell
-  zgen load chriskempson/base16-shell
-
   # pure
   zgen load mafredri/zsh-async
   zgen load sindresorhus/pure

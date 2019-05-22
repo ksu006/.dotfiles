@@ -39,7 +39,6 @@ endif
 
 " Plugins (junegunn/vim-plug)
 call plug#begin()
-Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
 Plug 'haya14busa/vim-poweryank'
@@ -50,6 +49,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
+Plug 'rakr/vim-one'
 Plug 'rhysd/conflict-marker.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -68,13 +68,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
-" base16-vim
-let base16colorspace = 256
-if filereadable(expand('~/.vimrc_background'))
-  source ~/.vimrc_background
-else
-  colorscheme base16-default-dark
-endif
+" vim-one
+colorscheme one
+set background=light
+let g:airline_theme = 'one'
+let g:airline_powerline_fonts = 1
 
 " fzf.vim
 nnoremap <Leader>f :Files<CR>
