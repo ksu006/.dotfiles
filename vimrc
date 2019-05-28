@@ -98,6 +98,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 " undotree
 nnoremap <Leader>u :UndotreeToggle<CR>
 
+" vim-airline
+let g:airline_powerline_fonts = 1
+
 " vim-fugitive
 nmap <Leader>g :Gstatus<CR>gg<c-n>
 
