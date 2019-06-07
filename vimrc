@@ -39,7 +39,7 @@ endif
 
 " Plugins (junegunn/vim-plug)
 call plug#begin()
-Plug 'chriskempson/base16-vim', {'commit': 'cbc9d08'}
+Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'edkolev/tmuxline.vim'
 Plug 'haya14busa/vim-poweryank'
