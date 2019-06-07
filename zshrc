@@ -12,7 +12,7 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Aliases
 alias dl='cd ~/Downloads'
-alias dot='cd ~/dotfiles'
+alias dot='cd ~/.config/dotfiles'
 alias g='git'
 alias ws='cd ~/workspace'
 
