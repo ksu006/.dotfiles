@@ -28,6 +28,7 @@ if ! zgen saved; then
   # oh-my-zsh
   zgen oh-my-zsh
   zgen oh-my-zsh plugins/common-aliases
+  zgen oh-my-zsh plugins/fzf
   zgen oh-my-zsh plugins/zsh_reload
 
   # pure
@@ -42,8 +43,5 @@ if ! zgen saved; then
 
   zgen save
 fi
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
