@@ -87,6 +87,10 @@ let $FZF_DEFAULT_COMMAND='
   \ ag --filename-pattern ""
   \'
 
+" limelight.vim
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
 " nerdtree
 let NERDTreeQuitOnOpen = 1
 nnoremap <Leader>n :NERDTreeToggle<CR>
