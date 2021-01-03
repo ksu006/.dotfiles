@@ -21,7 +21,7 @@ DISABLE_AUTO_UPDATE=true
 
 # zgen
 ZGEN_DIR=~/.zgen
-[ -d $ZGEN_DIR ] || git clone https://github.com/tarjoilija/zgen.git $ZGEN_DIR
+[ -d $ZGEN_DIR ] || git clone https://github.com/tarjoilija/zgen $ZGEN_DIR
 source $ZGEN_DIR/zgen.zsh
 
 if ! zgen saved; then
