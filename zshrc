@@ -7,6 +7,11 @@ export LESS=-FRX
 typeset -U path
 path=(~/bin ~/.local/bin $path)
 
+# brew completion
+if type brew &>/dev/null; then
+  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+fi
+
 # Discard older duplicate entries from history.
 setopt HIST_IGNORE_ALL_DUPS
 
@@ -18,6 +23,7 @@ alias ws='cd ~/workspace'
 
 # Disable oh-my-zsh auto update prompt.
 DISABLE_AUTO_UPDATE=true
+ZSH_DISABLE_COMPFIX=true
 
 # zgen
 ZGEN_DIR=~/.zgen
