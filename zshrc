@@ -30,9 +30,9 @@ source $ZGEN_DIR/zgen.zsh
 if ! zgen saved; then
   # oh-my-zsh
   zgen oh-my-zsh
-  zgen oh-my-zsh plugins/autojump
   zgen oh-my-zsh plugins/common-aliases
   zgen oh-my-zsh plugins/fzf
+  zgen oh-my-zsh plugins/z
   zgen oh-my-zsh plugins/zsh_reload
 
   # pure
