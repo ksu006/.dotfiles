@@ -7,9 +7,14 @@ export LESS=-FRX
 typeset -U path
 path=(~/bin ~/.local/bin /opt/homebrew/bin $path)
 
-# brew completion
 if type brew &>/dev/null; then
+  # brew completion
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+  # Homebrew/homebrew-command-not-found
+  HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+  if [ -f "$HB_CNF_HANDLER" ]; then
+  source "$HB_CNF_HANDLER";
+  fi
 fi
 
 # Discard older duplicate entries from history.
@@ -30,6 +35,7 @@ source $ZGEN_DIR/zgen.zsh
 if ! zgen saved; then
   # oh-my-zsh
   zgen oh-my-zsh
+  zgen oh-my-zsh plugins/command-not-found
   zgen oh-my-zsh plugins/common-aliases
   zgen oh-my-zsh plugins/fzf
   zgen oh-my-zsh plugins/z
@@ -38,6 +44,8 @@ if ! zgen saved; then
   # pure
   zgen load mafredri/zsh-async
   zgen load sindresorhus/pure
+
+  zgen load MichaelAquilina/zsh-you-should-use
 
   # zsh-completions
   zgen load zsh-users/zsh-completions
