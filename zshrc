@@ -5,7 +5,7 @@ export EDITOR=vim
 export LESS=-FRX
 
 typeset -U path
-path=(~/bin ~/.local/bin $path)
+path=(~/bin ~/.local/bin /opt/homebrew/bin $path)
 
 # brew completion
 if type brew &>/dev/null; then
@@ -16,10 +16,7 @@ fi
 setopt HIST_IGNORE_ALL_DUPS
 
 # Aliases
-alias dl='cd ~/Downloads'
-alias dot='cd ~/.config/dotfiles'
 alias g='git'
-alias ws='cd ~/workspace'
 
 # Disable oh-my-zsh auto update prompt.
 DISABLE_AUTO_UPDATE=true
@@ -33,6 +30,7 @@ source $ZGEN_DIR/zgen.zsh
 if ! zgen saved; then
   # oh-my-zsh
   zgen oh-my-zsh
+  zgen oh-my-zsh plugins/autojump
   zgen oh-my-zsh plugins/common-aliases
   zgen oh-my-zsh plugins/fzf
   zgen oh-my-zsh plugins/zsh_reload
