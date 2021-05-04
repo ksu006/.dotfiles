@@ -4,13 +4,14 @@ let mapleader = "\<Space>"
 set autoread
 set backup
 set backupdir=/tmp//,.
-set clipboard^=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set colorcolumn=+1
 set directory=/tmp//,.
 set expandtab
 set hidden
 set hlsearch
 set ignorecase
+set linebreak
 set mouse=a
 set nojoinspaces
 set number
@@ -27,6 +28,11 @@ augroup END
 
 " Remap jj to <Esc>
 inoremap jj <Esc>
+
+" Use gk and gj for navigating virtual (wrapped) lines, except when jumping
+" more than one line
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Spell check
 autocmd vimrc FileType gitcommit,markdown setlocal spell
