@@ -43,7 +43,7 @@ if ! zgen saved; then
 
   # pure
   zgen load mafredri/zsh-async
-  zgen load sindresorhus/pure
+  zgen load sindresorhus/pure . main
 
   zgen load MichaelAquilina/zsh-you-should-use
 
