@@ -12,8 +12,15 @@ if type brew &>/dev/null; then
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fi
 
-# Discard older duplicate entries from history.
+# History
+export HISTFILE=~/.zsh_history
+export HISTSIZE=50000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
 
 # Aliases
 alias g='git'
@@ -31,7 +38,6 @@ zinit light sindresorhus/pure
 zinit wait lucid for \
   OMZP::common-aliases \
   OMZP::fzf \
-  OMZP::zsh_reload \
   atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall -q .' zsh-users/zsh-completions \
   zsh-users/zsh-syntax-highlighting
