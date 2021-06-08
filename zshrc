@@ -40,12 +40,8 @@ zinit wait lucid for \
   OMZP::fzf \
   atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall -q .' zsh-users/zsh-completions \
-  zsh-users/zsh-syntax-highlighting
-
-# rupa/z
-if type brew &>/dev/null && [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
-  source $(brew --prefix)/etc/profile.d/z.sh
-fi
+  zsh-users/zsh-syntax-highlighting \
+  pick"z.sh" rupa/z
 
 autoload compinit
 compinit
