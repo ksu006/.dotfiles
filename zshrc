@@ -37,11 +37,12 @@ zinit light sindresorhus/pure
 
 zinit wait lucid for \
   OMZP::common-aliases \
-  OMZP::fzf \
+  https://github.com/junegunn/fzf/blob/master/shell/completion.zsh \
+  https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh \
+  pick"z.sh" rupa/z \
   atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall -q .' zsh-users/zsh-completions \
-  zsh-users/zsh-syntax-highlighting \
-  pick"z.sh" rupa/z
+  zsh-users/zsh-syntax-highlighting
 
 autoload compinit
 compinit
