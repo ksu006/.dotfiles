@@ -7,7 +7,7 @@ export LESS=-FRX
 typeset -U path
 path=(~/bin ~/.local/bin /opt/homebrew/bin $path)
 
-# brew completion
+# Completions provided by brew.
 if type brew &>/dev/null; then
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fi
@@ -21,9 +21,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 setopt SHARE_HISTORY
-
-# Aliases
-alias g='git'
 
 # zinit
 if type brew &>/dev/null && [ -f $(brew --prefix)/opt/zinit/zinit.zsh ]; then
