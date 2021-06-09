@@ -23,11 +23,8 @@ setopt HIST_VERIFY
 setopt SHARE_HISTORY
 
 # zinit
-if type brew &>/dev/null && [ -f $(brew --prefix)/opt/zinit/zinit.zsh ]; then
-  source $(brew --prefix)/opt/zinit/zinit.zsh
-else
-  source ~/.zinit/bin/zinit.zsh
-fi
+[ -f ~/.zinit/bin/zinit.zsh ] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+source ~/.zinit/bin/zinit.zsh
 
 zinit ice lucid pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
