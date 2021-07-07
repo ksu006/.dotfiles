@@ -30,7 +30,6 @@ zinit ice lucid pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
 zinit wait lucid for \
-  OMZP::common-aliases \
   https://github.com/junegunn/fzf/blob/master/shell/completion.zsh \
   https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh \
   pick"z.sh" rupa/z \
