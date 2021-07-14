@@ -32,6 +32,7 @@ zinit light sindresorhus/pure
 zinit wait lucid for \
   https://github.com/junegunn/fzf/blob/master/shell/completion.zsh \
   https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh \
+  chriskempson/base16-shell \
   pick"z.sh" rupa/z \
   atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall -q .' zsh-users/zsh-completions \
