@@ -43,6 +43,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" base16-vim 256 colorspace support
+let base16colorspace=256
+
 " Plugins (junegunn/vim-plug)
 call plug#begin()
 Plug 'chriskempson/base16-vim'
